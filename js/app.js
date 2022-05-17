@@ -77,7 +77,7 @@ function renderTableHeaders() {
   }
 
   let tdElem = document.createElement('td');
-  tdElem.textContent = 'Daily Total';
+  tdElem.textContent = 'Daily Location Total';
   trElem.appendChild(tdElem);
 }
 
@@ -94,6 +94,7 @@ function renderAllCities(){
 
 function renderTotalsRow() {
   let tfootElem = document.createElement('tfoot');
+  tfootElem.textContent = 'Totals';
   table.appendChild(tfootElem);
   // TODO: stretch goal
   // One time: render out total cookie sales
