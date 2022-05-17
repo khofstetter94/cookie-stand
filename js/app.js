@@ -75,6 +75,10 @@ function renderTableHeaders() {
     thHeadHours.textContent = hours[i];
     trElem.appendChild(thHeadHours);
   }
+
+  let tdElem = document.createElement('td');
+  tdElem.textContent = 'Daily Total';
+  trElem.appendChild(tdElem);
 }
 
 function renderAllCities(){
