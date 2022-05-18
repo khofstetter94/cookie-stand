@@ -94,11 +94,28 @@ function renderAllCities(){
 
 function renderTotalsRow() {
   let tfootElem = document.createElement('tfoot');
-  tfootElem.textContent = 'Totals';
   table.appendChild(tfootElem);
-  // TODO: stretch goal
-  // One time: render out total cookie sales
-  // for loop each city to get hte totals for that hour block
+
+  let trFootElem = document.createElement('tr');
+  tfootElem.appendChild(trFootElem);
+
+  let thFootElem = document.createElement('th');
+  thFootElem.textContent = 'Totals';
+  trFootElem.appendChild(thFootElem);
+  let grandTotal = 0;
+  for (let i = 0; i < hours.length; i++){
+    let hourTotal = 0;
+    let tdFootElem = document.createElement('td');
+    trFootElem.appendChild(tdFootElem);
+    for(let j = 0; j < storeCities.length; j++){
+      hourTotal += storeCities[j].hourlyCookies[i];
+    }
+    tdFootElem.textContent = hourTotal;
+    grandTotal += hourTotal;
+  }
+  let tdFinalElem = document.createElement('td');
+  tdFinalElem.textContent = grandTotal;
+  trFootElem.appendChild(tdFinalElem);
 }
 
 renderTableHeaders();
