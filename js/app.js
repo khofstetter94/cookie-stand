@@ -2,6 +2,8 @@
 
 let table = document.getElementById('salesTable');
 
+let locationForm = document.getElementById('new-form');
+
 function randomCustomers(min, max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -81,8 +83,9 @@ function renderTableHeaders() {
   trElem.appendChild(tdElem);
 }
 
+let tbodyElem = document.createElement('tbody');
+
 function renderAllCities(){
-  let tbodyElem = document.createElement('tbody');
   table.appendChild(tbodyElem);
   for(let i = 0; i < storeCities.length; i++){
     storeCities[i].soldCookies();
@@ -94,6 +97,7 @@ function renderAllCities(){
 
 function renderTotalsRow() {
   let tfootElem = document.createElement('tfoot');
+  tfootElem.setAttribute('id', 'tfoot');
   table.appendChild(tfootElem);
 
   let trFootElem = document.createElement('tr');
@@ -121,3 +125,27 @@ function renderTotalsRow() {
 renderTableHeaders();
 renderAllCities();
 renderTotalsRow();
+
+function handleSubmit(event){
+  event.preventDefault();
+  let newCityName = event.target.newCityName.value;
+  let newMinCust = +event.target.newMinCust.value;
+  let newMaxCust = +event.target.newMaxCust.value;
+  let newCookieAvg = +event.target.newCookieAvg.value;
+
+  let newLocation = new City(newCityName, newMinCust, newMaxCust, newCookieAvg);
+
+  newLocation.soldCookies();
+  newLocation.totalCookies();
+  newLocation.render(tbodyElem);
+
+  let tfoot = document.getElementById('tfoot');
+  tfoot.parentNode.removeChild(tfoot);
+
+  renderTotalsRow();
+
+  locationForm.reset();
+}
+
+
+locationForm.addEventListener('submit', handleSubmit);
