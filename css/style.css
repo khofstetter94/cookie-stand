@@ -1,8 +1,19 @@
+header {
+  text-align: center;
+}
+
+h1 {
+  color: #E4BB97;
+}
+
 body {
+  text-align: center;
   background-color: #584B53;
 }
 
 table {
+  position: static;
+  margin-left: 135px;
   border: 1.5px solid rgb(87, 73, 49);
   border-collapse: collapse;
   width: 80%;
@@ -15,4 +26,12 @@ th, td {
   border: 1.5px solid rgb(87, 73, 49);
   text-align: center;
   height: 45px;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+a {
+  color: #E4BB97;
 }
