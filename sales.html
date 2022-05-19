@@ -11,6 +11,24 @@
   <header><h1>Daily Cookie Sales</h1></header>
   <article id="cookie-sales">
     <table id='salesTable'></table>
+    <br>
+    <form id="new-form">
+      <fieldset>
+        <legend>New Store Location</legend>
+        <label for="newCityName">City Location:</label>
+        <input id="newCityName" type="text" name="newCityName">
+
+        <label for="newMinCust">Minimum number of customers per hour:</label>
+        <input id="newMinCust" type="number" name="newMinCust">
+
+        <label for="newMaxCust">Maximum number of customers per hour:</label>
+        <input id="newMaxCust" type="number" name="newMaxCust">
+
+        <label for="newCookieAvg">Average cookies sold per customer:</label>
+        <input id="newCookieAvg" type="number" name="newCookieAvg">
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
   </article>
   <script src="js/app.js" type="text/javascript"></script>
   <footer><a href="index.html">Return Home</a></footer>
