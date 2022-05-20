@@ -5,24 +5,37 @@ body {
 header {
   background-color: #E4BB97;
   text-align: center;
+  border: 5px solid #9D5C63;
+  margin-bottom: 10px;
 }
 
 h1 {
+  position: relative;
+  margin-top: 10px;
   font-family: 'Amatic SC', cursive;
-  font-size: 80px;
+  font-size: 140px;
   color: #9D5C63;
 }
 
 header img {
-  margin-top: 8px;
+  margin-top: 20px;
   margin-left: 40px;
   float: left;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 nav ul {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
-  align-items: flex-end;
+  margin-top: 0px;
+  font-family: 'Amatic SC', cursive;
+  font-size: xx-large;
 }
 
 a {
@@ -31,30 +44,68 @@ a {
   color: #9D5C63;
 }
 
-div {
-  display: flex;
-  justify-content: space-between;
-  color: #E4BB97;
-}
-
-div p {
-  display: flex;
-  justify-content: center;
-  color: #E4BB97;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-  line-height: 30px;
-}
-
-main ul {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+table {
+  position: static;
+  margin-left: 135px;
+  text-align: center;
+  border: 5px solid #9D5C63;
+  border-collapse: collapse;
+  width: 80%;
+  height: 100px;
+  background-color: #E4BB97;
+  color: #9D5C63;
   margin-bottom: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+#hero {
+  width: 80%;
+  margin-left: 100px;
+  border: 5px dotted #D6E3F8;
+}
+
+figcaption {
+  font-family: 'Amatic SC', cursive;
+  font-size: xx-large;
+  text-align: center;
+  color: #E4BB97;
+}
+
+#family {
+  font-size: x-large;
+}
+
+#bio {
+  color: #E4BB97;
+  font-size: xx-large;
+  width: 50%;
+  font-family: 'Amatic SC', cursive;
+  margin-top: 0px;
+  letter-spacing: 1px;
+}
+
+#cutter {
+  align-self: flex-start;
+  width: 20%;
+  border: 5px dotted #D6E3F8;
+  border-radius: 80px;
+}
+
+#cookie1 {
+  width: 20%;
+  border: 5px dotted #D6E3F8;
+  border-radius: 80px;
+}
+
+#cookie2 {
+  width: 30%;
+  border: 5px dotted #D6E3F8;
+  border-radius: 80px;
 }
 
 section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 30px;
 }
 
@@ -69,29 +120,38 @@ h2 {
   color: #D6E3F8;
 }
 
-p {
-  height: 300px;
+#merch {
   font-size: x-large;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #D6E3F8;
 }
 
+#shirt {
+  border: 5px solid #E4BB97;
+}
+
 button {
   margin-top: 15px;
   transition: 350ms;
-  background-color: black;
-  color: white;
+  background-color:#E4BB97;
+  color: #584B53;
 }
 
 button:hover {
-  background-color: white;
-  color: black;
+  background-color: #584B53;
+  color: #E4BB97;
 }
 
 footer {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 150px;
   background-color: #E4BB97;
+}
+
+footer p {
+  color: #584B53;
+  font-size: x-large;
 }
