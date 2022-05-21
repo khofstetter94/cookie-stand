@@ -44,20 +44,6 @@ a {
   color: #9D5C63;
 }
 
-table {
-  position: static;
-  margin-left: 135px;
-  text-align: center;
-  border: 5px solid #9D5C63;
-  border-collapse: collapse;
-  width: 80%;
-  height: 100px;
-  background-color: #E4BB97;
-  color: #9D5C63;
-  margin-bottom: 30px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-}
-
 #hero {
   width: 80%;
   margin-left: 100px;
@@ -144,14 +130,30 @@ button:hover {
 
 footer {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   height: 150px;
   background-color: #E4BB97;
+  margin-bottom: 30px;
 }
 
 footer p {
   color: #584B53;
   font-size: x-large;
+}
+
+table {
+  position: static;
+  text-align: center;
+  border: 5px solid #9D5C63;
+  border-collapse: collapse;
+  padding: 30px;
+  width: 80%;
+  background-color: #E4BB97;
+  color: #9D5C63;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+#footfish {
+  border: 5px solid #9D5C63;
 }
